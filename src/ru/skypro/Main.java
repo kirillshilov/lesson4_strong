@@ -27,7 +27,7 @@ public class Main {
                 sum = first + second;
                 first = second;
                 second = sum;
-            }
+             }
         }
         {
             // Задача 3
