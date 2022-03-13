@@ -17,16 +17,18 @@ public class Main {
             }
         }
         {
-            int a = 0;
-            int b = 1;
-            for (int i = 0; i < 8; i++) {
-                System.out.print(a);
-                System.out.print(a + b);
-                System.out.println(b);
-                a = b = (b + a);
+            // задача 2
+            int first = 0;
+            int second = 1;
+            int sum = first + second;
+            System.out.print(first +" ");
+            for (int i = 0; i <= 8 ; i++){
+            System.out.print(sum + " ");
+                sum = first + second;
+                first = second;
+                second = sum;
             }
         }
-// Задача 2
         {
             // Задача 3
             int age = 19;
@@ -47,29 +49,29 @@ public class Main {
             int salary = 60_000;
             int wantedSum = 330_000;
             if (age < 23 && salary > 80_000 && salary/2 >= (wantedSum*(1.1 + 0.01 - 0.07))/12) {
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01 - 0.07))/12) + "рублей Одобрено");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01 - 0.07))/12) + "рублей Одобрено");
             } else if (age > 23 && age < 30 && salary > 80_000 && salary/2 >= ((wantedSum*(1.1 + 0.005 - 0.007))/12)){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005 - 0.07))/12) + "рублей Одобрено");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005 - 0.07))/12) + "рублей Одобрено");
             } else if ( age > 30 && salary > 80_000 && salary/2 >= ((wantedSum*(1.1 - 0.007))/12)){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1- 0.07))/12) + "рублей Одобрено");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1- 0.07))/12) + "рублей Одобрено");
             } else if (age < 23 && salary < 80_000 && salary/2 >= (wantedSum*(1.1 + 0.01))/12) {
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01))/12) + "рублей Одобрено");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01))/12) + "рублей Одобрено");
             } else if (age > 23 && age < 30 && salary < 80_000 && salary/2 >= ((wantedSum*(1.1 + 0.005))/12)){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005))/12) + "рублей Одобрено");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005))/12) + "рублей Одобрено");
             } else if ( age > 30 && salary < 80_000 && salary/2 >= (wantedSum*1.1)/12){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*1.1)/12) + "рублей Одобрено");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*1.1)/12) + "рублей Одобрено");
             } else if (age < 23 && salary > 80_000 && salary/2 < (wantedSum*(1.1 + 0.01 - 0.007))/12) {
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01 - 0.07))/12) + "рублей Отказано");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01 - 0.07))/12) + "рублей Отказано");
             } else if (age > 23 && age < 30 && salary > 80_000 && salary/2 < ((wantedSum*(1.1 + 0.005 - 0.007))/12)){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005 - 0.07))/12) + "рублей Отказано");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005 - 0.07))/12) + "рублей Отказано");
             } else if ( age > 30 && salary > 80_000 && salary/2 < ((wantedSum*(1.1 - 0.007))/12)){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1- 0.07))/12) + "рублей Отказано");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1- 0.07))/12) + "рублей Отказано");
             } else if (age < 23 && salary < 80_000 && salary/2 < (wantedSum*(1.1 + 0.01))/12) {
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01))/12) + "рублей Отказано");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + salary/2 + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.01))/12) + "рублей Отказано");
             } else if (age > 23 && age < 30 && salary < 80_000 && salary/2 < ((wantedSum*(1.1 + 0.005))/12)){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005))/12) + "рублей Отказано");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*(1.1 + 0.005))/12) + "рублей Отказано");
             } else if ( age > 30 && salary < 80_000 && salary/2 < (wantedSum*1.1)/12){
-                System.out.println ("Максимальный платеж при ЗП " + salary + " равен" + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*1.1)/12) + "рублей Отказано");
+                System.out.println ("Максимальный платеж при ЗП " + salary + " равен " + (salary/2) + "рублей. Платеж по кредиту " + ((wantedSum*1.1)/12) + "рублей Отказано");
             }
         }
     }}
